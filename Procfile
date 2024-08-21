@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn "calculador_de_vpn(dash):app"
