@@ -13,6 +13,7 @@ import random
 
 # Inicializa la aplicación Dash con el tema de Bootstrap
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 def generate_random_cash_flows(num_flows=5):
     """Genera una lista de flujos de caja aleatorios."""
@@ -184,4 +185,4 @@ def calculate_npv(n_clicks, discount_rate, initial_investment, cash_flows):
     return bar_chart, line_chart, viability
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host='0.0.0.0', port = 8050)
+    app.run_server(debug=True)
