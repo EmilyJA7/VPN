@@ -185,5 +185,5 @@ def calculate_npv(n_clicks, discount_rate, initial_investment, cash_flows):
     return bar_chart, line_chart, viability
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 8050))
+    port = int(os.environ.get("PORT", 10000))
     app.run_server(debug=True, host='0.0.0.0', port=port)
